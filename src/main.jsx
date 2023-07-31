@@ -8,6 +8,7 @@ import Signup from './components/Signup.jsx';
 import Login from './components/Login.jsx';
 import Landing from './components/Landing.jsx';
 import Feed from './components/Feed.jsx';
+import Signout from './components/Signout.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         element:<Feed/>
       }
     ]
+  },
+  {
+    path:'/logout',
+    element:<Signout/>
   }
 ])
 
