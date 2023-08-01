@@ -180,19 +180,23 @@ export default function NavbarDefault() {
     </ul>
   );
  
+  function signup(){
+    navigate('/signup')
+  }
+
   return (
     <Navbar shadow={false} className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
+          href="/"
           className="mr-4 cursor-pointer py-1.5 font-medium"
         >
           DevNet
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         {!isLoggedIn ? 
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <Button onClick={signup} variant="gradient" size="sm" className="hidden lg:inline-block">
           <span>Sign Up</span>
         </Button>:null}
         <IconButton
@@ -237,7 +241,7 @@ export default function NavbarDefault() {
       <Collapse open={openNav}>
         <div className="container mx-auto">
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
+          <Button onClick={signup} variant="gradient" size="sm" fullWidth className="mb-2">
             <span>Sign Up</span>
           </Button>
         </div>
